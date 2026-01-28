@@ -1,0 +1,25 @@
+{
+  "name": "lab-management-system",
+  "version": "1.0.0",
+  "description": "Lab & Class Management System with database backend",
+  "main": "deploy-heroku.js",
+  "scripts": {
+    "start": "node server-updated.js",
+    "dev": "nodemon server-updated.js",
+    "init-db": "node database/init-updated.js",
+    "build": "echo 'No build step needed for static files'",
+    "heroku-postbuild": "npm run init-db"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "cors": "^2.8.5",
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "keywords": ["lab", "management", "education", "attendance"],
+  "author": "",
+  "license": "MIT"
+}
